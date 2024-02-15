@@ -11,19 +11,88 @@
 </head>
 <body class="font-poppins">
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
-        <section class="home min-h-screen text-white flex justify-center items-center">
+        <section id="home" class="min-h-screen text-white flex justify-center items-center">
         <div class=" flex flex-col items-center gap-10">
             <h1 class="font-antor text-8xl uppercase">Alpha Clash Pro</h1>
             <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button class="btn">Play Now</button>
+            <button onclick="hideandshow()" class="btn">Play Now</button>
         </div>
         </section>
-        <section class="play">
-
+        <section id="play" class="hidden">
+        <div class="flex flex-col justify-center items-center gap-20 p-10">
+            <!-- Screen -->
+                <div class="artboard artboard-horizontal phone-6 flex flex-col items-center border-8 border-[#010313CC] rounded-2xl bg-[#FFFFFFB3] text-white">
+                    <p class="bg-[#2F2941] text-center w-fit p-3 rounded-b-lg">Don't watch keyboard  while playing...</p>
+                    <h1 id="current-letter" class="uppercase flex flex-col justify-center items-center min-h-80 text-8xl">Y</h1>
+                </div>
+            <!-- Keyboard -->
+            <div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
+                </div> 
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
+                </div> 
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
+                </div>
+            </div>
+            <!-- life score -->
+            <div class="flex justify-between w-full">
+                <div>
+                    <button class="btn bg-[#894189] text-white rounded-full">
+                        <p>Life</p>
+                        <img src="images/life.png" alt="">
+                        <span id="current-life">5</span>
+                    </button>
+                </div>
+                  <div>
+                    <button class="btn bg-[#360490] text-white rounded-full">
+                        Score
+                        <img src="images/doller.png" alt="">
+                        <span id="current-score">0</span>
+                    </button>
+                  </div>
+            </div>
+        </div>
         </section>
-        <section class="score">
-
+        <section id="score" class="flex flex-col justify-center items-center min-h-screen hidden">
+            <div class="text-white text-center space-y-6 bg-[#FFFFFF33] rounded-lg p-6">
+                <h1 class="text-8xl">
+                    <span class="font-extrabold">Score:</span>
+                    <span id="final-score">14</span>
+                </h1>
+                <button onclick="playagain()" class="btn">Play Again</button>
+                <p>Practice will make you Pro</p>
+            </div>
         </section>
     </main>
+
+    <script src="scripts/utility.js"></script>
+    <script src="scripts/alpha.js"></script>
 </body>
 </html>
